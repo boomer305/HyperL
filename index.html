@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HyperL Scripts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #090a0f;
+      --fg: #ffffff;
+      --accent: #00ffff;
+      --box-bg: #1a1a2d;
+    }
+    [data-theme="light"] {
+      --bg: #f0f0f0;
+      --fg: #111;
+      --accent: #0077ff;
+      --box-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/assets/img/starfield.jpg') repeat;
+      background-size: cover;
+      z-index: -1;
+      animation: starScroll 200s linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes starScroll {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 0; }
+    }
+
+    .title {
+      font-size: 3rem;
+      margin-top: 2rem;
+      text-align: center;
+      text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    }
+
+    .btn, .close-btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--accent), #a000ff);
+      color: #fff;
+      box-shadow: 0 0 10px var(--accent);
+      transition: all 0.3s ease;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    .btn:hover, .close-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .discord {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .discord a {
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--box-bg);
+      color: var(--fg);
+      padding: 2rem;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .script {
+      background: #222;
+      color: #00ffcc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: var(--accent);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      .title { font-size: 2rem; }
+      .btn, .close-btn { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-theme" onclick="toggleTheme()" title="Toggle light/dark mode">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+  <div class="title">🌌 HyperL Scripts 🌌</div>
+  <button class="btn" onclick="toggleModal()">✨ View Scripts ✨</button>
+
+  <div class="discord">
+    Join <strong>HyperL</strong> for more scripts 👉 
+    <a href="https://discord.gg/KDvgEJrn8D" target="_blank">discord.gg/KDvgEJrn8D</a>
+  </div>
+
+  <div class="modal" id="scriptModal">
+    <div class="modal-content">
+      <h2>📜 Script List</h2>
+      
+<div class="script">// Inf Yield Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()</div>
+<div class="script">// Fisch Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()</div>
+<div class="script">// Infinite Jump
+loadstring(game:HttpGet("https://pastefy.app/5X1yKExM/raw"))()</div>
+<div class="script">// MM2 Script choose what script you want
+https://cheater.fun/hacks_roblox/7931-murder-mystery-2-scripts.html</div>
+<div class="script">// Blue Lock Rivals Script pick any
+https://bluelockrivalsscript.com/</div>
+<div class="script">// BloxFruit Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)</div>
+<div class="script">// Slap Battles Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FOGOTY/slap-god/main/script"))()</div>
+<div class="script">// Slap Battles Script
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/UltimateBadgeHub/main/main.lua'))()</div>
+<div class="script">// doors Script
+loadstring(game:HttpGet('https://raw.githubusercontent.com/zReal-King/King-Hub-v2/main/Loader.lua'))()</div>
+<div class="script">// deadrails Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()</div>
+<div class="script">// Chat Bypasser Script
+loadstring(game:HttpGet("https://github.com/Synergy-Networks/products/raw/main/BetterBypasser/loader.lua"))()</div>
+<div class="script">// Grow a Garden Script
+all on our discord! https://discord.gg/NSAJ5TY9nK</div>
+<div class="script">// Bee Swarm Script
+https://keyrblx.com/getkey/ApocHub?hwid=F3B1FF5964D641269D7E0D6DDD241A0B</div>
+<div class="script">// Wallhop Script
+loadstring(game:HttpGet("https://pastebin.com/raw/0GTnF2hN", true))()</div>
+<div class="script">// Arsenal Script
+loadstring(game:HttpGet("https://pastebin.com/raw/8ysy7ENG",true))()</div>
+<div class="script">// Spelling Bee Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PreppyHub/PreppyHub/refs/heads/main/SpellingBee"))()</div>
+<div class="script">// Starving Artist Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/itsnoctural/Utilities/main/Closed/StarvingArtist.lua"))()</div>
+<div class="script">// My Restaurant Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astro-Public/Astro.Public.MyResturant/main/SCRIPT", true))()</div>
+<div class="script">// My Vault Script
+This is a universal script for all the games https://discord.gg/P6ww3qM4sR</div>
+<div class="script">// Steal a Brainrot Script
+https://discord.gg/j9ZEH69JeN key changes everyday!</div>
+<div class="script">// Murder Vs Sheriff Script
+loadstring(game:HttpGet("https://gist.githubusercontent.com/vinhxdev/e92f38aeb4ac30416a00042008f11e52/raw/f30db37119ab0888d1738ac02012f92dc4876f25/main.lua"))()</div>
+<div class="script">// Block Tales Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TexRBLX/Roblox-stuff/refs/heads/main/block%20tales/testing.lua"))()</div>
+
+      <button class="close-btn" onclick="toggleModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleModal() {
+      document.getElementById('scriptModal').classList.toggle('show');
+    }
+
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</body>
+</html>
